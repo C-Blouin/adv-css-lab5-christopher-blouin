@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* 
+
+Advanced Interface Design with CSS Lab 5 Bootstrap Carousel - Christopher Blouin
+
+*/
+/* Custom CSS */
+/* STEP 12: Using your browser's DOM Inspector, figure out how the default .carousel-caption is positioned with CSS, and change it */
+
+/* Targeting the carousel caption class within the figcaption, and positioning it at the top of the carousel container. Since content inside the carousel item containers are already positioned absolutely by default, I only need to change the top property. */
+.carousel-caption {
+	top: 2rem;
+}
+
+/* Targeting the carousel indicator button container, and positioning them at the top of the carousel container. */
+.carousel-indicators {
+	top: 1rem;
+}
+
+/* STEP 13: View the result in the browser, then head back to index.html */
+/* The below class and animation keyframes are used by the JavaScript */
+.zoomit {
+	animation: zoom-in-out .5s;
+}
+
+@keyframes zoom-in-out {
+	from {
+		transform: none;
+	}
+	50% {
+		/* Changing the scale value to something a little bit more subtle. */
+		transform: scale(1.02);
+		transform-origin: center top;
+	}
+	to {
+		transform: none;
+	}
+}
+
